@@ -49,18 +49,18 @@ const isDateValid = (dayElement, monthElement, yearElement) => {
 };
 
 
-const claculateAge = (year, month, day) => {
-    const today = new Date();
-    const birthDate = new Date(year, month - 1, day);
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const monthDiff = today.getMonth() - birthDate.getMonth();
+const calculateAge = (year, month, day) => {
+  const today = new Date();
+  const birthDate = new Date(year, month - 1 , day);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
 
-    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
 
-    return age;
-}
+  return age;
+};
 
 const onClickHandler = () => {
     const dayElement = document.querySelector('.card__input[name="day"]');
