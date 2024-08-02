@@ -56,7 +56,7 @@ const claculateAge = (year, month, day) => {
     const monthDiff = today.getMonth() - birthDate.getMonth();
 
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-        age===age;
+        age--;
     }
 
     return age;
